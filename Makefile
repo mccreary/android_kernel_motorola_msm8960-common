@@ -346,9 +346,10 @@ PERL		= perl
 CHECK		= sparse
 
 # Try to always use GNU ld
-ifneq ($(wildcard $(CROSS_COMPILE)ld.bfd),)
-LD		= $(CROSS_COMPILE)ld.bfd
-endif
+## XXXX Missing symlink in prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/
+#ifneq ($(wildcard $(CROSS_COMPILE)ld.bfd),)
+#LD		= $(CROSS_COMPILE)ld.bfd
+#endif
 
 # Use the wrapper for the compiler.  This wrapper scans for new
 # warnings and causes the build to stop upon encountering them.
